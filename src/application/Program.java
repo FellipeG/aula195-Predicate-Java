@@ -22,9 +22,7 @@ public class Program {
 		System.out.println("Type the value you want to exclude from the list: ");
 		double value = sc.nextDouble();
 		
-		Predicate<Product> pred = p -> p.getPrice() >= value;
-		
-		list.removeIf(pred);
+		list.removeIf(p -> p.getPrice() >= value);
 		
 		for(Product p : list) {
 			System.out.println(p);
